@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CiceroneBottomNavigationSample</string>
+    <!-- BottomNavigation tabs titles -->
+    <string name="bottom_nav_a_title">A</string>
+    <string name="bottom_nav_b_title">B</string>
+    <string name="bottom_nav_c_title">C</string>
 </resources>

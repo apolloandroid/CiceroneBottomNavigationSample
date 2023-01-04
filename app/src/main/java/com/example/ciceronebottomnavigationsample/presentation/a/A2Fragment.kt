@@ -1,4 +1,4 @@
-package com.example.ciceronebottomnavigationsample.c
+package com.example.ciceronebottomnavigationsample.presentation.a
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.ciceronebottomnavigationsample.R
 
-class C2Fragment : Fragment() {
+class A2Fragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_c2, container, false)
+        return inflater.inflate(R.layout.fragment_a2, container, false)
     }
 }

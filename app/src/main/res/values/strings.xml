@@ -1,7 +1,20 @@
 <resources>
-    <string name="app_name">CiceroneBottomNavigationSample</string>
+    <string name="app_name">CiceroneBottomNavigation</string>
+    <string name="button_next_text">Next Screen</string>
     <!-- BottomNavigation tabs titles -->
     <string name="bottom_nav_a_title">A</string>
     <string name="bottom_nav_b_title">B</string>
     <string name="bottom_nav_c_title">C</string>
+    <!-- A tab screens titles -->
+    <string name="a1_title">A1</string>
+    <string name="a2_title">A2</string>
+    <string name="a3_title">A3</string>
+    <!-- B tab screens titles -->
+    <string name="b1_title">B1</string>
+    <string name="b2_title">B2</string>
+    <string name="b3_title">B3</string>
+    <!-- C tab screens titles -->
+    <string name="c1_title">C1</string>
+    <string name="c2_title">C2</string>
+    <string name="c3_title">C3</string>
 </resources>

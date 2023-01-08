@@ -4,12 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/activity_main.xml" value="0.2734375" />
-        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_a1.xml" value="0.259375" />
+        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_a1.xml" value="0.25" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_a2.xml" value="0.2734375" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_a3.xml" value="0.2734375" />
+        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_a_root.xml" value="0.2734375" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_b1.xml" value="0.259375" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_b2.xml" value="0.259375" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_b3.xml" value="0.259375" />
+        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_b_root.xml" value="0.2734375" />
+        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_c1.xml" value="0.1" />
+        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_c2.xml" value="0.2734375" />
+        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_c3.xml" value="0.1640625" />
+        <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_c_root.xml" value="0.2734375" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_root_a.xml" value="0.2734375" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_root_b.xml" value="0.259375" />
         <entry key="..\:/Users/yu.khmelevskikh/CiceroneBottomNavigationSample/app/src/main/res/layout/fragment_root_c.xml" value="0.259375" />

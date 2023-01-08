@@ -8,11 +8,11 @@ import com.github.terrakok.cicerone.androidx.FragmentScreen
 
 object Screens {
 
-    fun RootScreen(bottomTabId: String) = FragmentScreen {
-        when (bottomTabId) {
-            R.id.menuItemA.toString() -> RootAFragment()
-            R.id.menuItemB.toString() -> RootBFragment()
-            else -> RootCFragment()
+    fun RootScreen(tabTag: String) = FragmentScreen {
+        when (tabTag) {
+            TabTags.TAG_A -> ARootFragment()
+            TabTags.TAG_B -> BRootFragment()
+            else -> CRootFragment()
         }
     }
 }

@@ -33,14 +33,9 @@ abstract class RootFragment : Fragment(), BackPressable {
         super.onPause()
     }
 
-    override fun onBackPressed() {
-//        val fragment = childFragmentManager.findFragmentById(R.id.ftc_container)
-//        return if (fragment != null && fragment is BackButtonListener
-//            && (fragment as BackButtonListener).onBackPressed()) {
-//            true
-//        } else {
-//            (activity as RouterProvider?)!!.router.exit()
-//            true
-//        }
+    override fun onBackPressed(): Boolean {
+        val fragment = childFragmentManager.findFragmentById(fragmentContainerId)
+        return fragment != null &&
+                (fragment as? BackPressable)?.onBackPressed() == true
     }
 }

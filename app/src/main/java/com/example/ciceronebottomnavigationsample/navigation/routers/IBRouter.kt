@@ -4,8 +4,7 @@ import com.example.ciceronebottomnavigationsample.navigation.Screens
 import com.github.terrakok.cicerone.Router
 import javax.inject.Inject
 
-interface IBRouter {
-    fun setFirstScreen()
+interface IBRouter : ILocalRouter {
     fun routeToB2Fragment()
     fun routeToB3Fragment()
 }
@@ -13,6 +12,8 @@ interface IBRouter {
 class BRouter @Inject constructor(private val router: Router) : IBRouter {
 
     override fun setFirstScreen() = router.newRootScreen(Screens.B1Screen())
+
+    override fun routeBack() = router.exit()
 
     override fun routeToB2Fragment() = router.navigateTo(Screens.B2Screen())
 

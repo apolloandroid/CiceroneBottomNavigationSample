@@ -8,6 +8,7 @@ import com.example.ciceronebottomnavigationsample.navigation.routers.CRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.IARouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.IBRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.ICRouter
+import com.example.ciceronebottomnavigationsample.navigation.routers.ILocalRouter
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.Router
 import dagger.Module
@@ -40,6 +41,21 @@ class NavigationModule {
     fun provideCCicerone(ciceroneHolder: LocalCiceroneHolder): Cicerone<Router> {
         return ciceroneHolder.getCicerone(TabTags.TAG_C)
     }
+
+    @Singleton
+    @Provides
+    @ALocalRouter
+    fun provideALocalRouter(aRouter: IARouter): ILocalRouter = aRouter
+
+    @Singleton
+    @Provides
+    @BLocalRouter
+    fun provideBLocalRouter(bRouter: IBRouter): ILocalRouter = bRouter
+
+    @Singleton
+    @Provides
+    @CLocalRouter
+    fun provideCLocalRouter(cRouter: ICRouter): ILocalRouter = cRouter
 
     @Singleton
     @Provides

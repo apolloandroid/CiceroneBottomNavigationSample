@@ -1,7 +1,8 @@
 package com.example.ciceronebottomnavigationsample.presentation.a.root
 
 import com.example.ciceronebottomnavigationsample.di.ACicerone
-import com.example.ciceronebottomnavigationsample.navigation.routers.IARouter
+import com.example.ciceronebottomnavigationsample.di.ALocalRouter
+import com.example.ciceronebottomnavigationsample.navigation.routers.ILocalRouter
 import com.example.ciceronebottomnavigationsample.presentation.base.RootViewModel
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.Router
@@ -12,8 +13,6 @@ import javax.inject.Inject
 class ARootViewModel @Inject constructor(
     @ACicerone
     override val cicerone: Cicerone<Router>,
-    private val aRouter: IARouter
-) : RootViewModel(cicerone) {
-
-    override fun setFirstScreen() = aRouter.setFirstScreen()
-}
+    @ALocalRouter
+    private val localRouter: ILocalRouter
+) : RootViewModel(cicerone, localRouter)

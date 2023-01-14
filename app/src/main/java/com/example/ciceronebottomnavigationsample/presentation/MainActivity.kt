@@ -18,27 +18,21 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setUpNavigation()
+        setUpBottomNavigation()
     }
 
-    //    TODO: implement
     override fun onBackPressed() {
-//        var fragment: Fragment? = null
-//        for (f in supportFragmentManager.fragments) {
-//            if (f.isVisible) {
-//                fragment = f
-//                break
-//            }
-//        }
-//        if (fragment != null && fragment is BackButtonListener
-//            && (fragment as BackButtonListener).onBackPressed()) {
-//            return
-//        } else {
-//            presenter.onBackPressed()
-//        }
+        val currentFragment = supportFragmentManager.fragments.firstOrNull { it.isVisible }
+        if (currentFragment != null &&
+            (currentFragment as? BackPressable)?.onBackPressed() == true
+        ) {
+            return
+        } else {
+            super.onBackPressed()
+        }
     }
 
-    private fun setUpNavigation() {
+    private fun setUpBottomNavigation() {
         binding.navigationView.apply {
             setOnItemSelectedListener { item ->
                 getTabTag(item.itemId)?.let { tag -> selectTab(tag) }

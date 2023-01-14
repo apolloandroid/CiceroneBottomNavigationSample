@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.ciceronebottomnavigationsample.databinding.FragmentA2Binding
+import com.example.ciceronebottomnavigationsample.presentation.BackPressable
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class A2Fragment : Fragment() {
+class A2Fragment : Fragment(), BackPressable {
 
     private lateinit var binding: FragmentA2Binding
 
@@ -28,5 +29,10 @@ class A2Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.button.setOnClickListener { viewModel.onNextButtonClicked() }
+    }
+
+    override fun onBackPressed(): Boolean {
+        viewModel.onBackPressed()
+        return true
     }
 }

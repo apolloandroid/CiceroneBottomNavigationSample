@@ -14,5 +14,5 @@ class CRootViewModel @Inject constructor(
     @CCicerone
     override val cicerone: Cicerone<Router>,
     @CLocalRouter
-    private val localRouter: ILocalRouter
+    override val localRouter: ILocalRouter
 ) : RootViewModel(cicerone, localRouter)

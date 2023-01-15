@@ -14,7 +14,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class B2Fragment : Fragment(), BackPressable {
 
     private lateinit var binding: FragmentB2Binding
-
     private val viewModel: B2ViewModel by viewModels()
 
     override fun onCreateView(

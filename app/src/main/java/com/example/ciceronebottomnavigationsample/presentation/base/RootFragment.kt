@@ -12,15 +12,16 @@ abstract class RootFragment : Fragment(), BackPressable {
     protected abstract val viewModel: RootViewModel
     protected abstract val fragmentContainerId: Int
 
-    open val navigator: Navigator by lazy {
+    protected val currentChildFragment: Fragment?
+        get() = childFragmentManager.findFragmentById(fragmentContainerId)
+
+    protected open val navigator: Navigator by lazy {
         AppNavigator(requireActivity(), fragmentContainerId, childFragmentManager)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (childFragmentManager.findFragmentById(fragmentContainerId) == null) {
-            viewModel.setFirstScreen()
-        }
+        if (currentChildFragment == null) viewModel.setFirstScreen()
     }
 
     override fun onResume() {
@@ -34,8 +35,7 @@ abstract class RootFragment : Fragment(), BackPressable {
     }
 
     override fun onBackPressed(): Boolean {
-        val fragment = childFragmentManager.findFragmentById(fragmentContainerId)
-        return fragment != null &&
-                (fragment as? BackPressable)?.onBackPressed() == true
+        return currentChildFragment != null &&
+                (currentChildFragment as? BackPressable)?.onBackPressed() == true
     }
 }

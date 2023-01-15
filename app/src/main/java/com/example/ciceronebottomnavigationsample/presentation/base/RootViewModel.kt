@@ -8,12 +8,12 @@ import com.github.terrakok.cicerone.Router
 
 abstract class RootViewModel(
     open val cicerone: Cicerone<Router>,
-    open val rootRouter: ILocalRouter
+    open val localRouter: ILocalRouter
 ) : ViewModel() {
 
     open fun onResume(navigator: Navigator) = cicerone.getNavigatorHolder().setNavigator(navigator)
 
     open fun onPause() = cicerone.getNavigatorHolder().removeNavigator()
 
-    open fun setFirstScreen() = rootRouter.setFirstScreen()
+    open fun setFirstScreen() = localRouter.setFirstScreen()
 }

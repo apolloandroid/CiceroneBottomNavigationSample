@@ -13,7 +13,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class B1Fragment : Fragment() {
 
     private lateinit var binding: FragmentB1Binding
-
     private val viewModel: B1ViewModel by viewModels()
 
     override fun onCreateView(

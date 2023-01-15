@@ -18,8 +18,8 @@ object Screens {
 
     fun RootScreen(tabTag: String) = FragmentScreen {
         when (tabTag) {
-            TabTags.TAG_A -> ARootFragment()
-            TabTags.TAG_B -> BRootFragment()
+            NavigationTabTags.TAG_A -> ARootFragment()
+            NavigationTabTags.TAG_B -> BRootFragment()
             else -> CRootFragment()
         }
     }

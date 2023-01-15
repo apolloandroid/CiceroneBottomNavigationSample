@@ -1,7 +1,7 @@
 package com.example.ciceronebottomnavigationsample.di
 
 import com.example.ciceronebottomnavigationsample.navigation.LocalCiceroneHolder
-import com.example.ciceronebottomnavigationsample.navigation.TabTags
+import com.example.ciceronebottomnavigationsample.navigation.NavigationTabTags
 import com.example.ciceronebottomnavigationsample.navigation.routers.ARouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.BRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.CRouter
@@ -25,21 +25,21 @@ class NavigationModule {
     @Provides
     @ACicerone
     fun provideACicerone(ciceroneHolder: LocalCiceroneHolder): Cicerone<Router> {
-        return ciceroneHolder.getCicerone(TabTags.TAG_A)
+        return ciceroneHolder.getCicerone(NavigationTabTags.TAG_A)
     }
 
     @Singleton
     @Provides
     @BCicerone
     fun provideBCicerone(ciceroneHolder: LocalCiceroneHolder): Cicerone<Router> {
-        return ciceroneHolder.getCicerone(TabTags.TAG_B)
+        return ciceroneHolder.getCicerone(NavigationTabTags.TAG_B)
     }
 
     @Singleton
     @Provides
     @CCicerone
     fun provideCCicerone(ciceroneHolder: LocalCiceroneHolder): Cicerone<Router> {
-        return ciceroneHolder.getCicerone(TabTags.TAG_C)
+        return ciceroneHolder.getCicerone(NavigationTabTags.TAG_C)
     }
 
     @Singleton

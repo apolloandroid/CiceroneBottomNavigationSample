@@ -21,7 +21,7 @@ abstract class RootFragment : Fragment(), BackPressable {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (currentChildFragment == null) viewModel.setFirstScreen()
+        if (currentChildFragment == null) setFirstScreen()
     }
 
     override fun onResume() {
@@ -38,4 +38,6 @@ abstract class RootFragment : Fragment(), BackPressable {
         return currentChildFragment != null &&
                 (currentChildFragment as? BackPressable)?.onBackPressed() == true
     }
+
+    fun setFirstScreen() = viewModel.setFirstScreen()
 }

@@ -7,6 +7,7 @@ import com.example.ciceronebottomnavigationsample.R
 import com.example.ciceronebottomnavigationsample.databinding.ActivityMainBinding
 import com.example.ciceronebottomnavigationsample.navigation.Screens
 import com.example.ciceronebottomnavigationsample.navigation.NavigationTabTags
+import com.example.ciceronebottomnavigationsample.presentation.base.RootFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                 item.isChecked = true
                 false
             }
+            setOnItemReselectedListener { (currentFragment as? RootFragment)?.setFirstScreen() }
         }
         selectTab(NavigationTabTags.TAG_A)
     }

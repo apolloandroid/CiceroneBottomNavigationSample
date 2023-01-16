@@ -45,19 +45,27 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.5.5'
 
     //  Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    def coroutinesVersion = "1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+
+    //  DataStore
+    def dataStoreVersion = "1.0.0"
+    implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
 
     //  Hilt
-    implementation 'com.google.dagger:hilt-android:2.42'
-    kapt 'com.google.dagger:hilt-compiler:2.42'
+    def hiltVersion = "2.42"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
 
     //  Lifecycle
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    def lifeCycleVersion = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifeCycleVersion"
 
-    //  Navigation
-    implementation 'com.github.terrakok:cicerone:7.1'
+    //  Cicerone
+    def ciceroneVersion = "7.1"
+    implementation "com.github.terrakok:cicerone:$ciceroneVersion"
 
     //  Tests
     testImplementation 'junit:junit:4.13.2'

@@ -5,6 +5,7 @@
     <string name="bottom_nav_a_title">A</string>
     <string name="bottom_nav_b_title">B</string>
     <string name="bottom_nav_c_title">C</string>
+    <string name="bottom_nav_d_title">D</string>
     <!-- A tab screens titles -->
     <string name="a1_title">A1</string>
     <string name="a2_title">A2</string>
@@ -17,4 +18,6 @@
     <string name="c1_title">C1</string>
     <string name="c2_title">C2</string>
     <string name="c3_title">C3</string>
+    <!-- D tab screens titles -->
+    <string name="d1_title">D1</string>
 </resources>

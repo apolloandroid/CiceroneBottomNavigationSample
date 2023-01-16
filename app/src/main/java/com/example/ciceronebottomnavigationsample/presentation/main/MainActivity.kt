@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         R.id.menuItemA -> NavigationTabTags.TAG_A
         R.id.menuItemB -> NavigationTabTags.TAG_B
         R.id.menuItemC -> NavigationTabTags.TAG_C
+        R.id.menuItemD -> NavigationTabTags.TAG_D
         else -> null
     }
 

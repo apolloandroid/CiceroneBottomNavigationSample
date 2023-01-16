@@ -12,3 +12,6 @@ annotation class BLocalRouter
 
 @Retention(AnnotationRetention.BINARY)
 annotation class CLocalRouter
+
+@Retention(AnnotationRetention.BINARY)
+annotation class DLocalRouter

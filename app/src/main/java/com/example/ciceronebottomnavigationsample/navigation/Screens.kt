@@ -12,6 +12,8 @@ import com.example.ciceronebottomnavigationsample.presentation.c.c1.C1Fragment
 import com.example.ciceronebottomnavigationsample.presentation.c.c2.C2Fragment
 import com.example.ciceronebottomnavigationsample.presentation.c.c3.C3Fragment
 import com.example.ciceronebottomnavigationsample.presentation.c.root.CRootFragment
+import com.example.ciceronebottomnavigationsample.presentation.d.root.DRootFragment
+import com.example.ciceronebottomnavigationsample.presentation.d.d1.D1Fragment
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 
 object Screens {
@@ -20,7 +22,8 @@ object Screens {
         when (tabTag) {
             NavigationTabTags.TAG_A -> ARootFragment()
             NavigationTabTags.TAG_B -> BRootFragment()
-            else -> CRootFragment()
+            NavigationTabTags.TAG_C -> CRootFragment()
+            else -> DRootFragment()
         }
     }
 
@@ -44,4 +47,7 @@ object Screens {
     fun C2Screen() = FragmentScreen { C2Fragment() }
 
     fun C3Screen() = FragmentScreen { C3Fragment() }
+
+    // D tab screens
+    fun D1Screen() = FragmentScreen { D1Fragment() }
 }

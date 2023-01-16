@@ -5,9 +5,11 @@ import com.example.ciceronebottomnavigationsample.navigation.NavigationTabTags
 import com.example.ciceronebottomnavigationsample.navigation.routers.ARouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.BRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.CRouter
+import com.example.ciceronebottomnavigationsample.navigation.routers.DRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.IARouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.IBRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.ICRouter
+import com.example.ciceronebottomnavigationsample.navigation.routers.IDRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.ILocalRouter
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.Router
@@ -59,6 +61,11 @@ class NavigationModule {
 
     @Singleton
     @Provides
+    @DLocalRouter
+    fun provideDLocalRouter(dRouter: IDRouter): ILocalRouter = dRouter
+
+    @Singleton
+    @Provides
     fun provideARouter(@ACicerone cicerone: Cicerone<Router>): IARouter = ARouter(cicerone.router)
 
     @Singleton
@@ -68,4 +75,8 @@ class NavigationModule {
     @Singleton
     @Provides
     fun provideCRouter(@CCicerone cicerone: Cicerone<Router>): ICRouter = CRouter(cicerone.router)
+
+    @Singleton
+    @Provides
+    fun provideDRouter(@DCicerone cicerone: Cicerone<Router>): IDRouter = DRouter(cicerone.router)
 }

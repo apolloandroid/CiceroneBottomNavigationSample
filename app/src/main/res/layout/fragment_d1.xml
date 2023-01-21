@@ -8,15 +8,26 @@
         android:layout_height="match_parent"
         tools:context=".presentation.d.d1.D1Fragment">
 
+        <TextView
+            android:id="@+id/textD1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d1_title"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/buttonLogOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_log_out"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/textD1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

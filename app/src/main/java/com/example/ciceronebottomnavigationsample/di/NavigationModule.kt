@@ -46,23 +46,10 @@ class NavigationModule {
 
     @Singleton
     @Provides
-    @ALocalRouter
-    fun provideALocalRouter(aRouter: IARouter): ILocalRouter = aRouter
-
-    @Singleton
-    @Provides
-    @BLocalRouter
-    fun provideBLocalRouter(bRouter: IBRouter): ILocalRouter = bRouter
-
-    @Singleton
-    @Provides
-    @CLocalRouter
-    fun provideCLocalRouter(cRouter: ICRouter): ILocalRouter = cRouter
-
-    @Singleton
-    @Provides
-    @DLocalRouter
-    fun provideDLocalRouter(dRouter: IDRouter): ILocalRouter = dRouter
+    @DCicerone
+    fun provideDCicerone(ciceroneHolder: LocalCiceroneHolder): Cicerone<Router> {
+        return ciceroneHolder.getCicerone(NavigationTabTags.TAG_D)
+    }
 
     @Singleton
     @Provides
@@ -79,4 +66,24 @@ class NavigationModule {
     @Singleton
     @Provides
     fun provideDRouter(@DCicerone cicerone: Cicerone<Router>): IDRouter = DRouter(cicerone.router)
+
+    @Singleton
+    @Provides
+    @ACicerone
+    fun provideALocalRouter(aRouter: IARouter): ILocalRouter = aRouter
+
+    @Singleton
+    @Provides
+    @BCicerone
+    fun provideBLocalRouter(bRouter: IBRouter): ILocalRouter = bRouter
+
+    @Singleton
+    @Provides
+    @CCicerone
+    fun provideCLocalRouter(cRouter: ICRouter): ILocalRouter = cRouter
+
+    @Singleton
+    @Provides
+    @DCicerone
+    fun provideDLocalRouter(dRouter: IDRouter): ILocalRouter = dRouter
 }

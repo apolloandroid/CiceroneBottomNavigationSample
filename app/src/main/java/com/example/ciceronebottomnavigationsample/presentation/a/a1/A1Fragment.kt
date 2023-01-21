@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.example.ciceronebottomnavigationsample.databinding.FragmentA1Binding
+import com.example.ciceronebottomnavigationsample.presentation.collectOnLifecycle
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,6 +28,21 @@ class A1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.button.setOnClickListener { viewModel.onNextButtonClicked() }
+        setUpNextButton()
+        setUpLogInButton()
+        subscribeOnViewModel()
+    }
+
+    private fun setUpNextButton() = binding.buttonNext.setOnClickListener {
+        viewModel.onNextButtonClicked()
+    }
+
+    private fun setUpLogInButton() = binding.buttonLogIn.setOnClickListener {
+        viewModel.onLogInButtonClicked()
+    }
+
+    private fun subscribeOnViewModel() = collectOnLifecycle(viewModel.isAuthenticated) {
+        binding.buttonNext.isVisible = it
+        binding.buttonLogIn.isVisible = !it
     }
 }

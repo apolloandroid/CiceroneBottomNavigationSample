@@ -18,10 +18,8 @@ class AuthRepository @Inject constructor(
     private val context: Context
 ) {
 
-    companion object {
-        private const val PREFERENCES_NAME = "preferences"
-        private val KEY_AUTHENTICATED = booleanPreferencesKey("key_authenticated")
-    }
+    private val PREFERENCES_NAME = "preferences"
+    private val KEY_AUTHENTICATED = booleanPreferencesKey("key_authenticated")
 
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(PREFERENCES_NAME)
 

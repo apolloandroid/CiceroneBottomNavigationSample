@@ -1,4 +1,4 @@
-package com.example.ciceronebottomnavigationsample.presentation
+package com.example.ciceronebottomnavigationsample.presentation.base
 
 /**
  * Implement this interface in your UI component ([Fragment] or [Activity])

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.ciceronebottomnavigationsample.databinding.FragmentB2Binding
-import com.example.ciceronebottomnavigationsample.presentation.BackPressable
+import com.example.ciceronebottomnavigationsample.presentation.base.BackPressable
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

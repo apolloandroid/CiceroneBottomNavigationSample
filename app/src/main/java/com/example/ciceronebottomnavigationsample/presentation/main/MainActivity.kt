@@ -8,7 +8,7 @@ import com.example.ciceronebottomnavigationsample.R
 import com.example.ciceronebottomnavigationsample.databinding.ActivityMainBinding
 import com.example.ciceronebottomnavigationsample.navigation.Screens
 import com.example.ciceronebottomnavigationsample.navigation.NavigationTabTags
-import com.example.ciceronebottomnavigationsample.presentation.BackPressable
+import com.example.ciceronebottomnavigationsample.presentation.base.BackPressable
 import com.example.ciceronebottomnavigationsample.presentation.base.RootFragment
 import com.example.ciceronebottomnavigationsample.presentation.collectOnLifecycle
 import dagger.hilt.android.AndroidEntryPoint

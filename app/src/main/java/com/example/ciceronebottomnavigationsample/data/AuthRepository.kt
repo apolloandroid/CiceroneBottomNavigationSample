@@ -27,7 +27,6 @@ class AuthRepository @Inject constructor(
         preferences[KEY_AUTHENTICATED] ?: false
     }
 
-
     suspend fun setAuthenticated(authenticated: Boolean) = context.dataStore.edit { preferences ->
         preferences[KEY_AUTHENTICATED] = authenticated
     }

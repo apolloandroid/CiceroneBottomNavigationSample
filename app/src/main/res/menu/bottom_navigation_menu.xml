@@ -9,4 +9,9 @@
     <item
         android:id="@+id/menuItemC"
         android:title="@string/bottom_nav_c_title" />
+
+    <item
+        android:id="@+id/menuItemD"
+        android:title="@string/bottom_nav_d_title"
+        android:visible="false" />
 </menu>

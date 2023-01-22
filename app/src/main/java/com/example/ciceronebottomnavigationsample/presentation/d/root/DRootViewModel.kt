@@ -1,6 +1,6 @@
-package com.example.ciceronebottomnavigationsample.presentation.c.root
+package com.example.ciceronebottomnavigationsample.presentation.d.root
 
-import com.example.ciceronebottomnavigationsample.di.CCicerone
+import com.example.ciceronebottomnavigationsample.di.DCicerone
 import com.example.ciceronebottomnavigationsample.navigation.routers.ILocalRouter
 import com.example.ciceronebottomnavigationsample.presentation.base.RootViewModel
 import com.github.terrakok.cicerone.Cicerone
@@ -9,9 +9,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class CRootViewModel @Inject constructor(
-    @CCicerone
+class DRootViewModel @Inject constructor(
+    @DCicerone
     override val cicerone: Cicerone<Router>,
-    @CCicerone
+    @DCicerone
     override val localRouter: ILocalRouter
 ) : RootViewModel(cicerone, localRouter)

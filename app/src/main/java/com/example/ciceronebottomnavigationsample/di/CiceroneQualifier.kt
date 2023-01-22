@@ -10,5 +10,10 @@ annotation class ACicerone
 @Retention(AnnotationRetention.BINARY)
 annotation class BCicerone
 
+@Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class CCicerone
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class DCicerone

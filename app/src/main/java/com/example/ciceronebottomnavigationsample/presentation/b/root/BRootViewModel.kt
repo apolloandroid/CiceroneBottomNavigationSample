@@ -1,7 +1,6 @@
 package com.example.ciceronebottomnavigationsample.presentation.b.root
 
 import com.example.ciceronebottomnavigationsample.di.BCicerone
-import com.example.ciceronebottomnavigationsample.di.BLocalRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.ILocalRouter
 import com.example.ciceronebottomnavigationsample.presentation.base.RootViewModel
 import com.github.terrakok.cicerone.Cicerone
@@ -13,6 +12,6 @@ import javax.inject.Inject
 class BRootViewModel @Inject constructor(
     @BCicerone
     override val cicerone: Cicerone<Router>,
-    @BLocalRouter
+    @BCicerone
     override val localRouter: ILocalRouter
 ) : RootViewModel(cicerone, localRouter)

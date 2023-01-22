@@ -6,10 +6,6 @@ import com.example.ciceronebottomnavigationsample.navigation.routers.ARouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.BRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.CRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.DRouter
-import com.example.ciceronebottomnavigationsample.navigation.routers.IARouter
-import com.example.ciceronebottomnavigationsample.navigation.routers.IBRouter
-import com.example.ciceronebottomnavigationsample.navigation.routers.ICRouter
-import com.example.ciceronebottomnavigationsample.navigation.routers.IDRouter
 import com.example.ciceronebottomnavigationsample.navigation.routers.ILocalRouter
 import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.Router
@@ -53,37 +49,37 @@ class NavigationModule {
 
     @Singleton
     @Provides
-    fun provideARouter(@ACicerone cicerone: Cicerone<Router>): IARouter = ARouter(cicerone.router)
+    fun provideARouter(@ACicerone cicerone: Cicerone<Router>): ARouter = ARouter(cicerone.router)
 
     @Singleton
     @Provides
-    fun provideBRouter(@BCicerone cicerone: Cicerone<Router>): IBRouter = BRouter(cicerone.router)
+    fun provideBRouter(@BCicerone cicerone: Cicerone<Router>): BRouter = BRouter(cicerone.router)
 
     @Singleton
     @Provides
-    fun provideCRouter(@CCicerone cicerone: Cicerone<Router>): ICRouter = CRouter(cicerone.router)
+    fun provideCRouter(@CCicerone cicerone: Cicerone<Router>): CRouter = CRouter(cicerone.router)
 
     @Singleton
     @Provides
-    fun provideDRouter(@DCicerone cicerone: Cicerone<Router>): IDRouter = DRouter(cicerone.router)
+    fun provideDRouter(@DCicerone cicerone: Cicerone<Router>): DRouter = DRouter(cicerone.router)
 
     @Singleton
     @Provides
     @ACicerone
-    fun provideALocalRouter(aRouter: IARouter): ILocalRouter = aRouter
+    fun provideALocalRouter(aRouter: ARouter): ILocalRouter = aRouter
 
     @Singleton
     @Provides
     @BCicerone
-    fun provideBLocalRouter(bRouter: IBRouter): ILocalRouter = bRouter
+    fun provideBLocalRouter(bRouter: BRouter): ILocalRouter = bRouter
 
     @Singleton
     @Provides
     @CCicerone
-    fun provideCLocalRouter(cRouter: ICRouter): ILocalRouter = cRouter
+    fun provideCLocalRouter(cRouter: CRouter): ILocalRouter = cRouter
 
     @Singleton
     @Provides
     @DCicerone
-    fun provideDLocalRouter(dRouter: IDRouter): ILocalRouter = dRouter
+    fun provideDLocalRouter(dRouter: DRouter): ILocalRouter = dRouter
 }

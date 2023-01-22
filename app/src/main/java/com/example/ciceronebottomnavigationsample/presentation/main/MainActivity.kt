@@ -36,7 +36,10 @@ class MainActivity : AppCompatActivity() {
         when {
             currentFragmentBackPressedResult == true -> return
             currentFragment?.tag == NavigationTabTags.TAG_A -> super.onBackPressed()
-            else -> selectTab(NavigationTabTags.TAG_A)
+            else -> {
+                selectTab(NavigationTabTags.TAG_A)
+                binding.navigationView.selectedItemId = R.id.menuItemA
+            }
         }
     }
 

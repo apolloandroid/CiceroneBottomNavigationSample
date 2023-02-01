@@ -6,6 +6,10 @@ import com.github.terrakok.cicerone.Cicerone
 import com.github.terrakok.cicerone.Navigator
 import com.github.terrakok.cicerone.Router
 
+/**
+ * Base class for root viewmodel for [RootFragment]
+ */
+
 abstract class RootViewModel(
     open val cicerone: Cicerone<Router>,
     open val localRouter: ILocalRouter

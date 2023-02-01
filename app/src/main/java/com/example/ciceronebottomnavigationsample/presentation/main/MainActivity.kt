@@ -54,11 +54,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun subscribeOnViewModel() = collectOnLifecycle(viewModel.isAuthenticated) {
-        binding.navigationView.menu.apply {
-            findItem(R.id.menuItemD).isVisible = it
-            if (!it) {
-                binding.navigationView.selectedItemId = R.id.menuItemA
-                deleteTab(NavigationTabTags.TAG_D)
+        binding.navigationView.apply {
+            menu.findItem(R.id.menuItemD).isVisible = it
+            if ((selectedItemId == R.id.menuItemD).and(!it)) {
+                this@MainActivity.deleteTab(NavigationTabTags.TAG_D)
+                selectedItemId = R.id.menuItemA
                 this@MainActivity.selectTab(NavigationTabTags.TAG_A)
             }
         }

@@ -6,6 +6,10 @@ import java.util.HashMap
 import javax.inject.Inject
 import javax.inject.Singleton
 
+/**
+ * Holds [Cicerone] instances for each separate navigation tab
+ */
+
 @Singleton
 class LocalCiceroneHolder @Inject constructor() {
 

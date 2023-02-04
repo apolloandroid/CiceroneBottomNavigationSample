@@ -8,5 +8,5 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(authRepository: AuthRepository) : ViewModel() {
 
-    val isAuthenticated = authRepository.isAuthenticated
+    val loggedIn = authRepository.loggedIn
 }

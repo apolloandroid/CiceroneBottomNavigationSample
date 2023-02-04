@@ -14,13 +14,11 @@ class A1ViewModel @Inject constructor(
     private val authRepository: AuthRepository
 ) : ViewModel() {
 
-    val isAuthenticated = authRepository.isAuthenticated
+    val loggedIn = authRepository.loggedIn
 
     fun onNextButtonClicked() = aRouter.routeToA2Fragment()
 
     fun onLogInButtonClicked() {
-        viewModelScope.launch {
-            authRepository.setAuthenticated(true)
-        }
+        viewModelScope.launch { authRepository.logIn() }
     }
 }

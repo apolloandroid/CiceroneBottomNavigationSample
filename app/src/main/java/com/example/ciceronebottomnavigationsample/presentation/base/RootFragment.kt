@@ -7,7 +7,7 @@ import com.github.terrakok.cicerone.Navigator
 import com.github.terrakok.cicerone.androidx.AppNavigator
 
 /**
- * Base class for root fragment, which holds fragment back stack for each navigation tab
+ * Base class for root fragment. Holds fragment back stack for each navigation tab
  */
 
 abstract class RootFragment : Fragment(), BackPressable {

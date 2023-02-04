@@ -1,7 +1,7 @@
 package com.example.ciceronebottomnavigationsample.navigation.routers
 
 /**
- * Interface for navigation within separate navigation tab
+ * Interface for implementing navigation within separate navigation tab
  */
 
 interface ILocalRouter {

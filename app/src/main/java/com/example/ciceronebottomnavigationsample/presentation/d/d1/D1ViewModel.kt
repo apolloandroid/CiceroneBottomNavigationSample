@@ -10,11 +10,9 @@ import javax.inject.Inject
 @HiltViewModel
 class D1ViewModel @Inject constructor(private val authRepository: AuthRepository) : ViewModel() {
 
-    val isAuthenticated = authRepository.isAuthenticated
+    val isAuthenticated = authRepository.loggedIn
 
     fun onLogOutButtonClicked() {
-        viewModelScope.launch {
-            authRepository.setAuthenticated(false)
-        }
+        viewModelScope.launch { authRepository.logOut() }
     }
 }

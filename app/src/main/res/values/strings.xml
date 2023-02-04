@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CiceroneBottomNavigation</string>
+    <string name="app_name">Cicerone Bottom Navigation</string>
     <!-- BottomNavigation tabs titles -->
     <string name="bottom_nav_a_title">A</string>
     <string name="bottom_nav_b_title">B</string>

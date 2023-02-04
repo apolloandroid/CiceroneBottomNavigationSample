@@ -7,7 +7,7 @@ import com.github.terrakok.cicerone.Navigator
 import com.github.terrakok.cicerone.Router
 
 /**
- * Base class for root viewmodel for [RootFragment]
+ * Base class for root [ViewModel] for [RootFragment]
  */
 
 abstract class RootViewModel(

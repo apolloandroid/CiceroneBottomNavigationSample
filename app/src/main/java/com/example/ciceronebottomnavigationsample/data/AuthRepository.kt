@@ -19,15 +19,13 @@ class AuthRepository @Inject constructor(
 ) {
 
     private val PREFERENCES_NAME = "preferences"
-    private val KEY_AUTHENTICATED = booleanPreferencesKey("key_authenticated")
+    private val KEY_LOGGED_IN = booleanPreferencesKey("key_logged_in")
 
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(PREFERENCES_NAME)
 
-    val isAuthenticated: Flow<Boolean> = context.dataStore.data.map { preferences ->
-        preferences[KEY_AUTHENTICATED] ?: false
-    }
+    val loggedIn: Flow<Boolean> = context.dataStore.data.map { it[KEY_LOGGED_IN] ?: false }
 
-    suspend fun setAuthenticated(authenticated: Boolean) = context.dataStore.edit { preferences ->
-        preferences[KEY_AUTHENTICATED] = authenticated
-    }
+    suspend fun logIn() = context.dataStore.edit { it[KEY_LOGGED_IN] = true }
+
+    suspend fun logOut() = context.dataStore.edit { it[KEY_LOGGED_IN] = false }
 }

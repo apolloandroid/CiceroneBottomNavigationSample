@@ -53,13 +53,13 @@ class MainActivity : AppCompatActivity() {
         this@MainActivity.selectTab(NavigationTabTags.TAG_A)
     }
 
-    private fun subscribeOnViewModel() = collectOnLifecycle(viewModel.isAuthenticated) {
+    private fun subscribeOnViewModel() = collectOnLifecycle(viewModel.loggedIn) { loggedIn ->
         binding.navigationView.apply {
-            menu.findItem(R.id.menuItemD).isVisible = it
-            if ((selectedItemId == R.id.menuItemD).and(!it)) {
+            menu.findItem(R.id.menuItemD).isVisible = loggedIn
+            if ((selectedItemId == R.id.menuItemD).and(!loggedIn)) {
                 this@MainActivity.deleteTab(NavigationTabTags.TAG_D)
-                selectedItemId = R.id.menuItemA
                 this@MainActivity.selectTab(NavigationTabTags.TAG_A)
+                selectedItemId = R.id.menuItemA
             }
         }
     }

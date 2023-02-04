@@ -41,7 +41,7 @@ class A1Fragment : Fragment() {
         viewModel.onLogInButtonClicked()
     }
 
-    private fun subscribeOnViewModel() = collectOnLifecycle(viewModel.isAuthenticated) {
+    private fun subscribeOnViewModel() = collectOnLifecycle(viewModel.loggedIn) {
         binding.buttonNext.isVisible = it
         binding.buttonLogIn.isVisible = !it
     }

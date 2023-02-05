@@ -27,4 +27,6 @@ The application is an example of implementing in-app navigation with [BottomNavi
   * DataStore
 
 ---  
+Feel free to write me about any bugs if you find them.
+
 Inspired by [official Cicerone sample](https://github.com/terrakok/Cicerone/tree/master/sample).
